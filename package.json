@@ -1,0 +1,36 @@
+{
+  "name": "template-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./dest/bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "errorhandler": "^1.5.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.3.15",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
+    "@types/errorhandler": "0.0.32",
+    "@types/mongodb": "^3.1.17",
+    "@types/mongoose": "^5.3.4",
+    "@types/morgan": "^1.7.35",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^5.0.0",
+    "run-sequence": "^2.2.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}

@@ -1,0 +1,4 @@
+/node_modules
+/dest
+/dbStartUp.bat
+/package-lock.json
