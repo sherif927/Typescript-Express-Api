@@ -1,35 +1,44 @@
 import {Request, Response, NextFunction, Router} from 'express';
-import {User} from '../models/UserModel';
+import {User} from '../../models/UserModel';
 import {from} from "rxjs";
-import {UserInterface as IUser} from "../interfaces/IUser";
+import { inject } from "inversify";
+import {TYPES} from "../../config/di-container/types";
+import {UserInterface as IUser} from "../../interfaces/IUser";
+import BaseController from '../BaseController';
+import IUserService from "../../interfaces/IUserService";
+import IAuthService from "../../interfaces/IAuthService";
 
 
 /**
- * @class UserAPI
+ * @class UserController
  */
-export class UserAPI {
+export class UserController extends BaseController {
+
+    @inject(TYPES.IUserService) private readonly _userService:IUserService;
+    @inject(TYPES.IAuthService) private readonly _authService:IAuthService;
+
     /**
-     * Create the API
-     * @static
+     * Creates the controller
      */
-    public static create(router: Router) {
+    initialize(router: Router): void {
         router.post('/api/User/', (req: Request, res: Response, next: NextFunction) => {
-            new UserAPI().createNewUser(req, res, next);
+            this.createNewUser(req, res, next);
         });
     }
 
     /**
      * Creates a New user Document in the Users Collection
      *
-     * @param req { Request } request
-     * @param res { Response } response
-     * @param next { NextFunction } next
+     * @param req { e.Request }
+     * @param res { e.Response }
+     * @param next { e.NextFunction }
      *
      * @return void
      */
+
     private createNewUser(req: Request, res: Response, next: NextFunction) {
         const user = new User({
-            firstName:req.body.name,
+            firstName: req.body.name,
             email: req.body.email,
             password: req.body.password,
             customers: []
