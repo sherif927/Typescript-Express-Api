@@ -1,8 +1,7 @@
 import IAuthService from "../interfaces/IAuthService";
 import {from} from "rxjs";
 import {UserInterface as IUser} from "./../interfaces/IUser";
-import { injectable, inject } from "inversify";
-import "reflect-metadata";
+import { injectable } from "inversify";
 
 /**
  * @class AuthService

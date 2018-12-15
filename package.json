@@ -17,6 +17,7 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "inversify": "^5.0.1",
+    "inversify-express-utils": "^6.2.0",
     "jsonwebtoken": "^8.4.0",
     "moment": "^2.22.2",
     "mongoose": "^5.3.15",

@@ -34,7 +34,7 @@ export class MongoDb {
             let message = "Connected To Database Successfully";
 
             if (err) {
-                message = "Error in connecting to the DB, Maybe it's not running?";
+                message = "Error connecting to the DB, Maybe it's not running?";
                 console.error(message);
                 process.exit(1);
             }
