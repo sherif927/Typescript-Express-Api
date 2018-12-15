@@ -6,7 +6,9 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [ "es2015", "dom" ],
+    "strict": false,
+    "types": ["reflect-metadata"],
+    "lib": [ "es6", "dom" ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": [

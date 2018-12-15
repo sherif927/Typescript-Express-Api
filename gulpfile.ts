@@ -20,7 +20,6 @@ gulp.task("copy", () => {
 });
 
 
-
 /**
  * Build the server.
  */
@@ -37,6 +36,6 @@ gulp.task("build:express", () => {
 /**
  * Build the project.
  */
-gulp.task("default", (done) => {
+gulp.task("default", () => {
     runSequence("clean", "copy", "build:express");
 })
